@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Extraer respuesta como objeto Posts y validar","1352","testGetUserByIdValidateByObject()","","2026-03-12","passed","2026-03-12","","tests.ApiTest","tests.ApiTest","testGetUserByIdValidateByObject"
+"Validar que el endpoint /users devuelve la lista correctamente","372","testGetUsers()","","2026-03-12","passed","2026-03-12","","tests.ApiTest","tests.ApiTest","testGetUsers"
+"Validar que el endpoint /posts crea un recurso correctamente","293","testCreatePost()","","2026-03-12","passed","2026-03-12","","tests.ApiTest","tests.ApiTest","testCreatePost"
+"Validar que el endpoint /posts/{id} devuelve el usuario correcto","776","testGetUserById()","","2026-03-12","passed","2026-03-12","","tests.ApiTest","tests.ApiTest","testGetUserById"
