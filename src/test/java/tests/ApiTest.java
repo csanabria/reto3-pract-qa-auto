@@ -10,13 +10,25 @@ import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.core.IsEqual.equalTo;
 
+//ejecuta el TestSuite
+//mvn clean test
+
+//Ejecuta testsuite por tag
+//mvn clean test -Denv="USER"
+
+//Ejecuta testsuite y realiza index offline de reporte
+//mvn clean test; allure generate target/allure-results --clean -o allure-report
+
+//Realiza servidor de allure para visualizar reporte
+//allure serve target/allure-results
+
+
 @Epic("API Tests")              // Agrupa todas las pruebas en un "Epic"
 @Feature("Usuarios")            // Define la funcionalidad principal
 @Tag("API")                     //mvn test -Dgroups=API
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ApiTest extends BaseTest {
 
-    @Test
     @Order(3)
     @Story("Obtener lista de usuarios")
     @Description("Validar que el endpoint /users devuelve la lista correctamente")
