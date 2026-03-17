@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "object",
+      "properties": {
+        "geo": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "string" }
+          },
+          "required": ["lat"]
+        }
+      }
+    }
+  },
+  "required": ["address"]
+}
