@@ -13,19 +13,19 @@ import static org.hamcrest.Matchers.equalTo;
 public class SandraTest extends BaseTest {
 
     @Test
-    @Order(2)
+    @Order(1)
     @Tag("USER")
     @Story("Obtener usuario por ID")
     @Description("Validar que el endpoint /posts/{id} devuelve el usuario correcto")
     public void testGetUserById() {
         given()
                 .when()
-                .pathParam("id",1)
+                .pathParam("id",9)
                 .get("/posts/{id}")
                 .then()
                 .statusCode(200)
-                .body("userId",equalTo(1))
+                .body("userId",equalTo(9))
                 .log();
-        Allure.step("Validación de userId=1 completada");
+        Allure.step("Validación de userId=9 completada");
     }
 }
