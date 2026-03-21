@@ -18,9 +18,9 @@ import static io.restassured.RestAssured.given;
 //Realiza servidor de allure para visualizar reporte
 //allure serve target/allure-results
 
-@Epic("API Tests")              // Agrupa todas las pruebas en un "Epic"
-@Feature("Usuarios")            // Define la funcionalidad principal
-@Tag("Api")                     //mvn test -Dgroups=API
+@Epic("API Tests")
+@Feature("Usuarios")
+@Tag("Api")
 public class ChristianTest extends BaseTest {
 
 
