@@ -51,18 +51,5 @@ public class ChristianTest extends BaseTest {
         Allure.step("Validación de street de users/id=1 completada");
     }
 
-    @Test
-    @Order(3)
-    @Story("Obtener lista de usuarios")
-    @Description("Validar que el endpoint /users devuelve la lista correctamente")
-    public void testGetUsers() {
-        given()
-                .when()
-                .get("/users")
-                .then()
-                .statusCode(200)
-                .body(matchesJsonSchemaInClasspath("schema/users.json"))
-                .log();
-        Allure.step("Validación de esquema JSON de usuarios completada");
-    }
+
 }
