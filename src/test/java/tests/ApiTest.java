@@ -7,9 +7,12 @@ import org.junit.jupiter.api.*;
 import io.qameta.allure.*;
 import utils.AllureUtils;
 
+import java.util.List;
+
 import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 //ejecuta el TestSuite
 //mvn clean test
@@ -37,15 +40,26 @@ public class ApiTest extends BaseTest {
     @Test
     @Order(3)
     public void testGetUsers() {
-        given()
+        Response response = given()
                 .when()
                 .get("/users")
                 .then()
                 .log().ifValidationFails()
                 .statusCode(200)
-                .body(matchesJsonSchemaInClasspath("schema/users.json"));
+                .extract()
+                .response();
 
-        Allure.step("Validación de schema completada");
+        // Validación de schema
+        Allure.step("Validación de schema");
+        response.then().body(matchesJsonSchemaInClasspath("schema/users.json"));
+
+        // Assert explícito para contenido
+        List<Integer> ids = response.jsonPath().getList("id");
+        Allure.step("Verificar que exista el usuario con id 1");
+        assertTrue(ids.contains(1), "El usuario con id 1 debería existir");
+
+        Allure.step("Verificación de cantidad de usuarios");
+        assertTrue(ids.size() > 0, "Debería haber al menos un usuario");
     }
 
     /**
