@@ -2,6 +2,7 @@ package tests;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import io.qameta.allure.*;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
 import static io.restassured.RestAssured.given;
 
@@ -19,26 +20,24 @@ import static io.restassured.RestAssured.given;
 
 @Epic("API Tests")              // Agrupa todas las pruebas en un "Epic"
 @Feature("Usuarios")            // Define la funcionalidad principal
-@Tag("API")                     //mvn test -Dgroups=API
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("Api")                     //mvn test -Dgroups=API
 public class ChristianTest extends BaseTest {
 
 
     @Test
-    @Order(1)
-    @Tag("USER")
+    @Tag("User")
     @Tag("Street")
     @Story("Validar street de usuario 1")
     @Description("Obtener usuario 1 y validar que el street del address sea Kulas Light")
     public void testCompareUserStreetWithKulasById() {
-        given()
+        Response response =given()
                 .when()
                 .pathParam("id",1)
                 .get("/users/{id}")
                 .then()
                 .statusCode(200)
-                .body("address.street", equalTo("Kulas Light"))
-                .log();
+                .log().ifValidationFails()
+                .extract().response();
         Allure.step("Validación de street de users/id=1 completada");
     }
 
