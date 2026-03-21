@@ -1,13 +1,5 @@
 package tests;
 
-//import Model.Posts;
-//import io.restassured.http.ContentType;
-//import org.json.JSONObject;
-//import static io.restassured.RestAssured.*;
-//import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-//import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-//import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-//import io.qameta.allure.*;
 import static org.hamcrest.core.IsEqual.equalTo;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
