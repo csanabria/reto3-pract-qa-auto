@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Hace get de un usuario inexistente y valida el response generado","1630","testValidacionUsuarioInexistente()","","2026-03-30","passed","2026-03-30","","tests.Reto3Test","tests.Reto3Test","testValidacionUsuarioInexistente"
+"Obtener un usuario por su id","89","testGetUsuarioPorId()","","2026-03-30","passed","2026-03-30","","tests.Reto3Test","tests.Reto3Test","testGetUsuarioPorId"
+"Hace múltiples validaciones de campos","121","testValidacionCamposUsuario()","","2026-03-30","passed","2026-03-30","","tests.Reto3Test","tests.Reto3Test","testValidacionCamposUsuario"
+"Hace get usuarios y valida varias condiciones","734","testValidacionGeneral()","","2026-03-30","passed","2026-03-30","","tests.Reto3Test","tests.Reto3Test","testValidacionGeneral"
+"Obtener la lista de usuarios","135","testGetListaUsuarios()","","2026-03-30","passed","2026-03-30","","tests.Reto3Test","tests.Reto3Test","testGetListaUsuarios"
