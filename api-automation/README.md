@@ -1,4 +1,4 @@
-# Reto 3 Práctico 
-# Automatización Inteligente de pruebas
+# Reto 3. Automatización de APIs con RestAssured
+# Diplomado en Automatización Inteligente de pruebas de software
 
 
