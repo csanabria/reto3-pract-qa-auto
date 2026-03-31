@@ -22,6 +22,7 @@ API utilizada para las pruebas:
 ```text
 api-automation/
 ├── pom.xml
+├── Reto3.pdf        (documento entregado en la plataforma)
 └── src
     └── test
         └── java
