@@ -1,5 +1,4 @@
 package tests;
-
 import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Order;
@@ -21,7 +20,7 @@ import static org.hamcrest.Matchers.*;
 //Realiza servidor de allure para visualizar reporte
 //allure serve target/allure-results
 
-@Epic("Reto práctioo 3 - Automatización de APIs con RestAssured ")
+@Epic("Reto práctico 3 - Automatización de APIs con RestAssured ")
 @Feature("Varios")
 @Tag("Api")
 @Tag("Reto3")
